@@ -1,0 +1,16 @@
+{
+  "name": "youtube433",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.12.1",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@tsconfig/node20": "catalog:",
+    "prettier": "catalog:",
+    "turbo": "^2.1.3"
+  }
+}

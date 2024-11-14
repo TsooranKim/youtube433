@@ -1,0 +1,15 @@
+{
+  "name": "schema",
+  "version": "0.0.0",
+  "private": true,
+  "type": "commonjs",
+  "exports": {
+    ".": "./src/index.ts",
+    "./quiz.schema.json": "./quiz.schema.json",
+    "./quiz-validation.schema.json": "./quiz-validation.schema.json"
+  },
+  "dependencies": {
+    "typescript": "catalog:",
+    "zod": "catalog:"
+  }
+}

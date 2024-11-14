@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "검토 결과",
+  "properties": {
+    "issues": {
+      "type": "array",
+      "description": "문제별 검토 사항",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "description": "퀴즈 제목",
+            "type": "string"
+          },
+          "choices": {
+            "description": "선택지 목록",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "answer": {
+            "description": "정답 번호",
+            "type": "integer"
+          },
+          "explanation": {
+            "description": "정답에 대한 간략한 해설",
+            "type": "string"
+          },
+          "details": {
+            "type": "object",
+            "description": "문제 검토 세부사항, 모든 항목은 자세하게 기술해야 한다.",
+            "properties": {
+              "주제와 일치 여부": { "type": "string", "description": "지정한 주제와 일치하는지 여부" },
+              "난이도": { "type": "string", "description": "지정한 대상에게 적절한 난이도인지 여부" },
+              "중복성": { "type": "string", "description": "이전 문제와 중복되는지 여부" },
+              "유사 문제": { "type": "string", "description": "이전 문제와 유사한지 여부" },
+              "자연스러움": { "type": "string", "description": "질문, 정답, 설명의 표현이 자연스러운지 여부" },
+              "규칙 준수 여부": { "type": "string", "description": "사전에 지정한 규칙을 준수하는지 여부" }
+            },
+            "required": ["주제와 일치 여부", "난이도", "중복성", "유사 문제", "자연스러움", "규칙 준수 여부"]
+          },
+          "evaluation": {
+            "type": "string",
+            "enum": ["적절함", "부적절함"]
+          },
+          "종합부적합이유": {
+            "type": "string",
+            "description": "부적절함일 경우 종합적인 이유"
+          }
+        },
+        "required": ["question", "choices", "answer", "evaluation", "details"]
+      }
+    },
+    "overall_evaluation": {
+      "type": "string",
+      "description": "전체 평가",
+      "enum": ["적절함", "부적절함"]
+    },
+    "invalid_questions": {
+      "type": "array",
+      "description": "부적절한 문제 번호 목록",
+      "items": {
+        "type": "number"
+      }
+    }
+  },
+  "required": ["issues", "overall_evaluation", "invalid_questions"]
+}

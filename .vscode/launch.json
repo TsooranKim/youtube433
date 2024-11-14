@@ -1,0 +1,67 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "ppro-short",
+      "type": "extendscript-debug",
+      "request": "launch",
+      "preLaunchTask": "npm: build",
+      "script": "${workspaceFolder}/apps/ppro/dist/script-short.js",
+      "hostAppSpecifier": "premierepro-24.0",
+      "bringToFront": true
+    },
+    {
+      "name": "tts",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["-r", "ts-node/register", "-C", "ts-node"],
+      "args": ["${workspaceFolder}/apps/tts/src/for-debug.ts"],
+      "cwd": "${workspaceFolder}/apps/tts"
+    },
+    {
+      "name": "quiz",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["-r", "ts-node/register", "-C", "ts-node"],
+      "args": ["${workspaceFolder}/apps/quiz/src/for-debug.ts"],
+      "console": "externalTerminal",
+      "cwd": "${workspaceFolder}/apps/quiz"
+    },
+    {
+      "name": "quiz-chat",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["-r", "ts-node/register", "-C", "ts-node"],
+      "console": "integratedTerminal",
+      "args": ["${workspaceFolder}/apps/quiz/src/for-chat.ts"],
+      "cwd": "${workspaceFolder}/apps/quiz"
+    },
+    {
+      "name": "quiz-complete",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["-r", "ts-node/register", "-C", "ts-node"],
+      "args": ["${workspaceFolder}/apps/quiz/src/for-complete-quizzes.ts"],
+      "cwd": "${workspaceFolder}/apps/quiz"
+    },
+    {
+      "name": "pick-questions",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["-r", "ts-node/register", "-C", "ts-node"],
+      "args": ["${workspaceFolder}/apps/quiz/src/for-pick-questions.ts"],
+      "cwd": "${workspaceFolder}/apps/quiz"
+    },
+    {
+      "name": "server",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["-r", "ts-node/register", "-C", "ts-node"],
+      "args": ["${workspaceFolder}/apps/server/src/index.ts"],
+      "cwd": "${workspaceFolder}/apps/server"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "quiz",
+  "version": "0.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "quiz": "ts-node src/for-debug.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^5.3.8",
+    "dotenv": "catalog:",
+    "glob": "^11.0.0",
+    "openai": "catalog:",
+    "schema": "workspace:*",
+    "uuid": "catalog:",
+    "zod": "catalog:",
+    "zod-validation-error": "catalog:"
+  },
+  "devDependencies": {
+    "@types/env": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/uuid": "catalog:",
+    "prettier": "catalog:",
+    "ts-node": "catalog:",
+    "typescript": "catalog:"
+  }
+}

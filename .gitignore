@@ -1,0 +1,14 @@
+node_modules
+dist
+output
+
+tsconfig.tsbuildinfo
+
+/result
+/store
+/temp
+
+.env*
+.turbo
+client_secret.json
+sources

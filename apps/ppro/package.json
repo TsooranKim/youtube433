@@ -1,0 +1,18 @@
+{
+  "name": "ppro",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rollup --config rollup.config.js"
+  },
+  "dependencies": {
+    "schema": "workspace:*",
+    "tslib": "catalog:",
+    "types-for-adobe": "^7.2.1",
+    "typescript": "catalog:"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.21.0"
+  }
+}

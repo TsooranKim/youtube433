@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "퀴즈",
+  "properties": {
+    "question": {
+      "description": "퀴즈 제목",
+      "type": "string",
+      "maxLength": 29
+    },
+    "choices": {
+      "description": "선택지 목록",
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "maxLength": 10
+      }
+    },
+    "answer": {
+      "description": "정답 번호",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4
+    },
+    "explanation": {
+      "description": "정답에 대한 간략한 해설",
+      "type": "string",
+      "maxLength": 30
+    }
+  },
+  "required": ["question", "choices", "answer"]
+}

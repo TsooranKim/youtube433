@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node -r ts-node/register src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "catalog:",
+    "express": "^4.19.2",
+    "googleapis": "^143.0.0",
+    "quiz": "workspace:*",
+    "schema": "workspace:*",
+    "tts": "workspace:*",
+    "uuid": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/env": "workspace:*",
+    "@types/express": ">=4 <=4.19",
+    "@types/node": "catalog:",
+    "@types/uuid": "catalog:",
+    "ts-node": "catalog:",
+    "typescript": "catalog:"
+  }
+}
